@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <style>
+        /* =========================
+   RESET
+========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+   HEADER
+========================= */
+
+        #header-site {
+            width: 100%;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(103, 49, 142, 0.08);
+        }
+
+        .header-wrapper {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* Logo */
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+
+        /* Navigation */
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #e5cccc;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+
+        /* =========================
+   MAINPAGE SECTION
+========================= */
+
+        .mainpage-section-container {
+            max-width: 1200px;
+            min-height: 650px;
+            margin: auto;
+            padding: 80px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+
+        /* Left Content */
+
+        .mainpage-contain-container {
+            flex: 1;
+        }
+
+        .mainpage-contain-container h1 {
+            font-size: 50px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .mainpage-contain-container p {
+            font-size: 18px;
+            color: #666;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+
+        /* CTA Buttons */
+
+        .cta-btn {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn1 a {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            background: #8fc1eb;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn1 a:hover {
+            background: #0c8fe6;
+            transform: translateY(-2px);
+        }
+
+
+        /* Banner */
+
+        .Banner {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Banner img {
+            width: 500px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+   LANDING PAGE
+========================= */
+
+        #Landpage {
+            background: #ffffff;
+        }
+
+        .LandPage-cointainer {
+            max-width: 1200px;
+            min-height: 600px;
+            margin: auto;
+            padding: 80px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+
+        /* Landing Content */
+
+        .LandPage-content {
+            flex: 1;
+        }
+
+        .LandPage-content h1 {
+            font-size: 45px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .LandPage-content p {
+            color: #08032f;
+            font-size: 18px;
+            margin-bottom: 25px;
+            max-width: 550px;
+        }
+
+
+        /* WOW Button */
+
+        .btn a {
+            display: inline-block;
+            background: #340b0b5f;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn a:hover {
+            background: #030350;
+        }
+
+
+        /* Landing Image */
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 500px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+   FOOTER
+========================= */
+
+        #footer-site {
+            background: #74b7b0;
+            color: white;
+            padding: 50px 30px;
+        }
+
+        .footer-wrapper {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .solical-icons ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .solical-icons ul li {
+            color: #d1d5db;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .solical-icons ul li:hover {
+            color: #c5e8b3;
+        }
+
+        .footer-wrapper h3 {
+            font-size: 20px;
+        }
+
+
+        /* =========================
+   RESPONSIVE
+========================= */
+
+        @media (max-width: 768px) {
+
+            .header-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+
+            /* Main */
+
+            .mainpage-section-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 20px;
+            }
+
+            .mainpage-contain-container h1 {
+                font-size: 38px;
+            }
+
+            .mainpage-contain-container p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-btn {
+                justify-content: center;
+            }
+
+            .Banner img {
+                width: 100%;
+                height: 300px;
+            }
+
+
+            /* Landing */
+
+            .LandPage-cointainer {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 20px;
+            }
+
+            .LandPage-content h1 {
+                font-size: 36px;
+            }
+
+            .LandPage-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-image img {
+                width: 100%;
+                height: 300px;
+            }
+
+
+            /* Footer */
+
+            .footer-wrapper {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .solical-icons ul {
+                align-items: center;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .header-wrapper {
+                padding: 12px 15px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+
+            .mainpage-contain-container h1 {
+                font-size: 30px;
+            }
+
+            .LandPage-content h1 {
+                font-size: 30px;
+            }
+
+            .cta-btn {
+                flex-direction: column;
+            }
+
+            .btn1 a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header-site">
+        <div class="header-wrapper">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsMNLpa1dsRoYQWN0Qcib3wNJgoxi-fPgdANeaOTXg-A&s=10"
+                    alt="Logo">
+            </div>
+
+            <!-- nav -->
+            <nav>
+                <ul>
+                    <li><a href="#mainpage">MainPage</a></li>
+                    <li><a href="#Landingpage">LandingPage</a></li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#system">System</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- main -->
+    <main id="main-site">
+        <section>
+            <div class="mainpage-section-container">
+
+                <div class="mainpage-contain-container">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, deleniti.</p>
+                    <div class="cta-btn">
+                        <div class="btn1">
+                            <a href="#">Click for more</a>
+                        </div>
+                        <div class="btn1">
+                            <a href="#">Say My Name</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="Banner">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyfkdp6mwagVErY0dqF99MNrF3FOfFecL5Buok27TXNUIaCkkiK0yAD8ID&s=10"
+                        alt="Banner">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+    <section id="Landpage">
+        <div class="LandPage-cointainer">
+            <div class="LandPage-content">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, nihil!
+                </p>
+                <div class="btn">
+                    <a href="btn">WOW</a>
+
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://i.pinimg.com/564x/d2/c1/6d/d2c16d99034f9407fd708dfc3356c688.jpg" alt="WOW">
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- main footer -->
+    </main>
+
+
+    <!-- footer site -->
+
+    <footer id="footer-site">
+
+
+        <div class="footer-wrapper">
+
+
+            <div class="solical-icons">
+
+                <ul>
+                    <li>Phone Number</li>
+                    <li>Location</li>
+                    <li>Social Media</li>
+                    <li>About Us</li>
+                    <li>For Inquary</li>
+
+
+                </ul>
+            </div>
+            <div>
+            <p>
+            <h3>Legal Policies</h3>
+            </p>
+            <p>
+            <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, numquam.
+
+            </h4>
+            </p>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
