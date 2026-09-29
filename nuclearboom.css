@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding:3px;
+   box-sizing: border-box;
+}
+
+
+
+.nuclear-card{
+    margin-bottom: 40px;
+    margin-right: 20px;
+    height: 50vh;
+    border-radius: 5px;
+    width: 30vw;
+    border: 1px solid black;
+}
+
+.card-image{
+    width: 100%;
+    height: 50%;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.card-content{
+    margin-top: 27px;
+padding-left: 18px;
+padding-right: 16px;
+
+}
+
+.card-content h3{
+margin-bottom: 18px;
+
+}
+
+.learn-more-btn {
+    margin-top: 30px;
+}
+
+.learn-more-btn a {
+
+    padding: 10px 30px;
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.nuclear-card-main{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 100vh;
+    width: 100%;
+}

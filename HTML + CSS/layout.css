@@ -1,0 +1,143 @@
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Header Container */
+.header-wrapper {
+    height: 10vh;
+    width: 100%;
+    background-color:#3b161638;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 3. Logo Alignment */
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 30px;
+    display: block; /* Removes baseline spacing */
+}
+
+/* 4. Navigation Menu */
+.navbar ul {
+    display: flex;
+    gap: 50px;
+    list-style: none; /* Consolidated list resetting here */
+}
+
+/* 5. Navigation Links */
+.navbar ul li a {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color:rgb(66 105 142);
+    display: inline-block;
+    
+    /* Setup space for the hover border beforehand to stop layout jumping */
+    padding: 5px 20px;
+    border: 1px solid transparent; 
+    transition: all 0.3s linear; 
+}
+
+/* 6. Navigation Link Hover State */
+.navbar ul li a:hover {
+    color: green;
+    border-color: white; /* Modifies border color smoothly without breaking layouts */
+}
+
+/* 7. Login CTA Button */
+.login-btn a {
+    display: inline-block;
+    background-color: #957c89;
+    padding: 6px 20px;
+    margin-right: 30px;
+    color: #27236d;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: Arial, sans-serif; /* Recommended contrast font against typewriter links */
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.login-btn a:hover {
+    background-color: #7fffd4d9; /* Slight dimming effect on button hover */
+}
+
+
+/* hero section */
+.hero-section-wrapper{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+
+    
+}
+
+
+.home-section-content {
+    height: 100%;
+    width: 50%;
+}
+
+.home-section-content h1,p{
+    margin-bottom: 20px;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 65%;
+}
+
+
+
+.btn{
+    margin-right: 10px;
+}
+
+
+    
+.hero-section-wrapper{
+    display: flex;
+}
+
+
+.cta-btn-wrapper{
+    display: flex;
+}
+
+.btn a{
+    background-color: #552020;
+    color: white;
+    text-decoration: none;
+    padding: 10px 50px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.banner img{
+border-radius: 42px 77px 26px 121px;
+}
+
+.banner2 img{
+    border-radius: 42px 77px 26px 121px;
+    width:  318px;
+
+}
+.banner2{
+margin:  20px 17px 16px;  
+}
+
+#content{
+    margin: 20px;
+}
