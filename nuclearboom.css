@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding:3px;
+    padding:0;
    box-sizing: border-box;
 }
 
@@ -54,9 +54,9 @@ margin-bottom: 18px;
 }
 
 .nuclear-card-main{
-
+    background-color: #dabcbc;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    height: 100vh;
+    height: 105vh;
     width: 100%;
 }
